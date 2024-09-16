@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preferences</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add your preferences page specific CSS here */
+        .preferences-container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .preferences-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .preferences-card h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .preferences-card p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .preferences-card input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .preferences-card button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .preferences-card button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Preferences</h1>
+        </div>
+    </header>
+    <main>
+        <div class="preferences-container">
+            <div class="preferences-card">
+                <h2>Notification Preferences</h2>
+                <p>Set your notification preferences below:</p>
+                <label><input type="checkbox"> Email Notifications</label><br>
+                <label><input type="checkbox"> SMS Notifications</label><br>
+                <button id="savePreferences">Save Preferences</button>
+            </div>
+        </div>
+    </main>
+    <script src="preferences.js"></script>
+</body>
+</html>

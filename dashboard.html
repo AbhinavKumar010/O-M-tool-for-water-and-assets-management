@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dash.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo.svg" alt="Logo" width="120">
+            </div>
+            <div class="menu-button">
+                <button id="menuToggle">☰ Menu</button>
+            </div>
+            <h1>Dashboard</h1>
+
+            <div class="header-actions">
+                <input type="text" placeholder="Search...🔎" class="search-bar">
+                <button class="notification-button" id="notificationButton">🔔</button>
+                <button class="settings-button" id="settingsButton">⚙️</button>
+                <div id="options-menu" class="hidden">
+                    <ul>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="preferences.html">Preferences</a></li>
+                        <li><a href="logout.html">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="dashboard-card">
+            <h2><img src="mapicon.png" alt="Map Icon" width="30"> Asset Management</h2>
+            <p>Track and manage water supply assets such as pumps, pipelines, and valves.</p>
+            <a href="asset-management.html">Go to Asset Management</a>
+        </section>
+
+        <section class="dashboard-card">
+            <h2><img src="invntry.png" alt="Inventory Icon" width="30"> Inventory Management</h2>
+            <p>Manage inventory of consumables like chemicals, filters, and spare parts.</p>
+            <a href="inventory-management.html">Go to Inventory Management</a>
+        </section>
+
+        <section class="dashboard-card">
+            <h2><img src="finace.png" alt="Finance Icon" width="30"> Finance Management</h2>
+            <p>Track financial records, manage receipts and expenditures, and generate reports.</p>
+            <a href="finance-management.html">Go to Finance Management</a>
+        </section>
+
+        <section class="dashboard-card">
+            <h2><img src="pay.png" alt="Payment Icon" width="30"> Payment Interface</h2>
+            <p>Manage payments and bill generation through integrated payment gateways.</p>
+            <a href="payment.html">Go to Payment Interface</a>
+        </section>
+
+    </main>
+
+    <div id="notificationPanel" class="notification-panel" style="display: none;">
+        <p>No new notifications</p>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Dashboard. All rights reserved.</p>
+            <ul>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Add JavaScript for functionality -->
+    <script>
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            var optionsMenu = document.getElementById('options-menu');
+            if (optionsMenu.style.display === 'none' || optionsMenu.style.display === '') {
+                optionsMenu.style.display = 'block';
+            } else {
+                optionsMenu.style.display = 'none';
+            }
+        });
+
+        document.getElementById('notificationButton').addEventListener('click', function() {
+            var notificationPanel = document.getElementById('notificationPanel');
+            if (notificationPanel.style.display === 'none' || notificationPanel.style.display === '') {
+                notificationPanel.style.display = 'block';
+            } else {
+                notificationPanel.style.display = 'none';
+            }
+        });
+
+        document.getElementById('settingsButton').addEventListener('click', function() {
+        
+        });
+    </script>
+</body>
+</html>

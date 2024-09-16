@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add your profile page specific CSS here */
+        .profile-container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            color: white;
+        }
+
+        .profile-card {
+            background-color: rgb(143, 192, 204);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .profile-card h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .profile-card p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .profile-card label {
+            display: block;
+            font-size: 16px;
+            margin: 10px 0 5px;
+        }
+
+        .profile-card input[type="text"] {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 8px;
+            width: 100%;
+            margin: 5px 0 10px;
+        }
+
+        .profile-card button {
+            background-color: #c2793c;
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .profile-card button:hover {
+            background-color: #2980b9;
+        }
+
+        @media (max-width: 600px) {
+            .profile-container {
+                padding: 10px;
+            }
+
+            .profile-card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container" style="padding: 10px;">
+            <h1>Profile</h1>
+        </div>
+    </header>
+    <main>
+        <div class="profile-container">
+            <div class="profile-card">
+                <h2>Profile Information</h2>
+                <p>Update your profile details below:</p>
+                <form id="profileForm">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" placeholder="Full Name" required>
+                    <label for="email">Email Address</label>
+                    <input type="text" id="email" placeholder="Email Address" required>
+                    <button type="submit" id="saveProfile">Save Changes</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="profile.js"></script>
+</body>
+</html>
